@@ -3,19 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>Kumail Riaz | Data Analyst</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f5f5f5; color: #333;}
-        header {background-color: #2c3e50; color: #fff; padding: 20px 0; text-align: center;}
-        header h1 {margin: 0; font-size: 2.5em;}
-        header p {margin: 5px 0 0;}
-        section {padding: 40px 20px; max-width: 900px; margin: auto; background: #fff; margin-bottom: 20px; border-radius: 8px;}
-        h2 {color: #2c3e50;}
+        /* Basic Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #2980b9;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in;
+        }
+        header h1 {margin: 0; font-size: 3em; font-family: 'Montserrat', sans-serif;}
+        header p {margin: 10px 0 0; font-size: 1.2em;}
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2980b9;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {color: #ecf0f1;}
+
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: 80px auto 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+        h2 {color: #2980b9; font-family: 'Montserrat', sans-serif;}
         ul {list-style: none; padding: 0;}
-        li {margin: 5px 0;}
-        .projects div {margin-bottom: 20px;}
-        footer {text-align: center; padding: 20px 0; background-color: #2c3e50; color: #fff;}
-        a {color: #2980b9; text-decoration: none;}
-        a:hover {text-decoration: underline;}
+        li {margin: 8px 0;}
+        .projects div {
+            margin-bottom: 30px;
+            transition: transform 0.3s, background 0.3s;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .projects div:hover {
+            transform: scale(1.03);
+            background-color: #ecf0f1;
+            border-left: 5px solid #2980b9;
+        }
+        img {
+            border-radius: 8px;
+            margin: 10px 0;
+            width: 100%;
+            transition: transform 0.3s;
+        }
+        img:hover {transform: scale(1.05);}
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2980b9;
+            color: #fff;
+        }
+        a.cv-button {
+            padding:12px 25px;
+            background:#2980b9;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+        a.cv-button:hover {background:#1f618d;}
+        @keyframes fadeIn {0% {opacity: 0; transform: translateY(-20px);} 100% {opacity: 1; transform: translateY(0);}}
+        @keyframes fadeUp {to {opacity: 1; transform: translateY(0);}}
     </style>
 </head>
 <body>
@@ -25,12 +104,19 @@
     <p>Aspiring Data Analyst | Python | SQL | Power BI | Tableau</p>
 </header>
 
-<section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
     <h2>About Me</h2>
-    <p>I am an enthusiastic Data Analyst with experience in Python, SQL, Excel, Power BI, and Tableau. I enjoy analyzing datasets, creating visualizations, and extracting actionable insights.</p>
+    <p>I am an enthusiastic Data Analyst with experience in Python, SQL, Excel, Power BI, and Tableau. I enjoy analyzing datasets, creating visualizations, and extracting actionable insights for data-driven decision making.</p>
 </section>
 
-<section>
+<section id="skills">
     <h2>Skills</h2>
     <ul>
         <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li>
@@ -41,32 +127,38 @@
     </ul>
 </section>
 
-<section class="projects">
+<section id="projects" class="projects">
     <h2>Projects</h2>
     <div>
         <strong>1. Sales Data Analysis</strong>
         <p>Tools: Python, Pandas, Matplotlib</p>
+        <img src="assets/images/sales_analysis.png" alt="Sales Analysis">
         <p>Analyzed sales data, visualized trends, and derived actionable insights.</p>
     </div>
     <div>
         <strong>2. Tesla Stock Analysis</strong>
         <p>Tools: Python, Pandas, Seaborn</p>
+        <img src="assets/images/tesla_stock.png" alt="Tesla Stock Analysis">
         <p>Performed exploratory data analysis on Tesla stock prices to find patterns and trends.</p>
     </div>
     <div>
         <strong>3. Bike Sales Analysis</strong>
         <p>Tools: Excel, Tableau</p>
+        <img src="assets/images/bike_sales.png" alt="Bike Sales Analysis">
         <p>Created dashboards and visual reports to track monthly bike sales performance.</p>
     </div>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <ul>
         <li>Email: kumail.788998@gmail.com</li>
         <li>LinkedIn: <a href="https://linkedin.com/in/kumail-riaz-7b52ab390" target="_blank">linkedin.com/in/kumail-riaz-7b52ab390</a></li>
         <li>GitHub: <a href="https://github.com/kumail-analyst" target="_blank">github.com/kumail-analyst</a></li>
     </ul>
+    <p style="text-align:center; margin-top:20px;">
+        <a href="kumail_cv.pdf" target="_blank" class="cv-button">Download CV</a>
+    </p>
 </section>
 
 <footer>
@@ -75,3 +167,4 @@
 
 </body>
 </html>
+
